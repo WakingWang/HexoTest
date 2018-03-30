@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -144,7 +144,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -361,10 +361,10 @@
       
         
           
-            <h1 id="Git团队协作使用规范"><a href="#Git团队协作使用规范" class="headerlink" title="Git团队协作使用规范"></a>Git团队协作使用规范</h1><blockquote>
-<p>规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。<br>提升我们的工作效率。<br>此规范会不断地完善。</p>
-</blockquote>
-<h2 id="开发人员Git使用流程（规范）"><a href="#开发人员Git使用流程（规范）" class="headerlink" title="开发人员Git使用流程（规范）"></a>开发人员Git使用流程（规范）</h2><ol>
+            <blockquote class="blockquote-center"><h1 id="Git团队协作使用规范"><a href="#Git团队协作使用规范" class="headerlink" title="Git团队协作使用规范"></a>Git团队协作使用规范</h1></blockquote>
+<div class="note danger"><p>规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。<br>提升我们的工作效率。<br>此规范会不断地完善。 </p></div>
+<blockquote class="blockquote-center"><h2 id="开发人员Git使用流程（规范）"><a href="#开发人员Git使用流程（规范）" class="headerlink" title="开发人员Git使用流程（规范）"></a>开发人员Git使用流程（规范）</h2></blockquote>
+<ol>
 <li><font color="#E85155">克隆分支</font>
 
 <p> <code>git clone git@url</code></p>
@@ -403,12 +403,13 @@
 </li>
 </ol>
 <hr>
-<h2 id="提交规范"><a href="#提交规范" class="headerlink" title="提交规范"></a>提交规范</h2><ul>
+<blockquote class="blockquote-center"><h2 id="提交规范"><a href="#提交规范" class="headerlink" title="提交规范"></a>提交规范</h2></blockquote>
+<ul>
 <li>禁止使用-ff or –force等强制提交，覆盖中央仓库的内容。</li>
 <li>不要各自在自己的 Git 分支开发，然后发文件合并。正确的方法应该是开一个远程分 支，然后一起在远程分支里协作。不然，容易出现代码回溯（即别人的代码被覆盖的情况）</li>
 <li><p>提交说明的结构<br>  当提交内容简单时，尽量用的一句话描述”做了什么”。</p>
 <p>  句子结构可以分解为(方括号中为可选): </p>
-<p>  &emsp;&emsp;&emsp;&emsp;&emsp;<code>动作+组件+[原因-索引]</code></p>
+<p>  &emsp;&emsp;&emsp;<code>动作+组件+[原因-索引]</code></p>
 <ul>
 <li>动作:即提交的行为，句首字母大写。有文章认为只使用Update、Add、Remove 三个动作就可以满足使用。但是为了更精准地描述，我还是倾向于使用其它动词，下图有常见的动作用词。每一次提交只应该有一个动作，多个动作请适当拆分。</li>
 <li>组件:指的操作内容，应该用精准的名称，类名方法名等，方便快速定位。不应 该提供宽泛的文件名</li>
@@ -420,11 +421,47 @@
 
 
 <hr>
-<h2 id="分支建立规范"><a href="#分支建立规范" class="headerlink" title="分支建立规范"></a>分支建立规范</h2><p>&emsp;&emsp;所有项目采用分支开发方式，分支分为<strong>开发分支</strong>、<strong>新功能分支</strong>、<strong>修复分支</strong>、<strong>其他分支</strong>和<strong>master分支</strong></p>
-<div style="margin-left:10%"><br><br>| <font color="#E85155">分支</font> | <font color="#E85155">命名</font> | <font color="#E85155">说明</font> |<br>| :- | :- | :- |<br>| master分支 | master | 发布分支 |<br>| 开发分支 | developer | 主要的提交分支 |<br>| 更能分支 | feature | 新功能分支 |<br>| 修复分支 | bugfix-{date} | bug修复分支 |<br>| 其他分支 | other-{date} | 特殊情况时建立的分支 |<br><br></div>
-
+<blockquote class="blockquote-center"><h2 id="分支建立规范"><a href="#分支建立规范" class="headerlink" title="分支建立规范"></a>分支建立规范</h2></blockquote>
+<p>&emsp;&emsp;所有项目采用分支开发方式，分支分为<strong>开发分支</strong>、<strong>新功能分支</strong>、<strong>修复分支</strong>、<strong>其他分支</strong>和<strong>master分支</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><font color="#E85155">分支</font></th>
+<th style="text-align:left"><font color="#E85155">命名</font></th>
+<th style="text-align:left"><font color="#E85155">说明</font> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"> master分支</td>
+<td style="text-align:left">master</td>
+<td style="text-align:left">发布分支 </td>
+</tr>
+<tr>
+<td style="text-align:left"> 开发分支</td>
+<td style="text-align:left">developer</td>
+<td style="text-align:left">主要的提交分支 </td>
+</tr>
+<tr>
+<td style="text-align:left"> 更能分支</td>
+<td style="text-align:left">feature</td>
+<td style="text-align:left">新功能分支 </td>
+</tr>
+<tr>
+<td style="text-align:left"> 修复分支</td>
+<td style="text-align:left">bugfix-{date}</td>
+<td style="text-align:left">bug修复分支 </td>
+</tr>
+<tr>
+<td style="text-align:left"> 其他分支</td>
+<td style="text-align:left">other-{date}</td>
+<td style="text-align:left">特殊情况时建立的分支 </td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h2 id="发布规范"><a href="#发布规范" class="headerlink" title="发布规范"></a>发布规范</h2><ul>
+<blockquote class="blockquote-center"><h2 id="发布规范"><a href="#发布规范" class="headerlink" title="发布规范"></a>发布规范</h2></blockquote>
+<ul>
 <li>生产环境必须使用主分支发布</li>
 <li>测试环境使用developer或者feature分支</li>
 </ul>
@@ -547,15 +584,11 @@
       
         
           
-            <ul>
-<li>明天开始是新的一年，也是职业转型的开始，由互联网转型大数据，前方的路看的不是很清楚，但是对生活的热情不减少。</li>
-</ul>
-<blockquote>
-<p>从明天开始，做一个幸福的人<br>喂马、劈柴，周游世界<br>从明天起，关心粮食和蔬菜<br>我有一所房子，面朝大海，春暖花开</p>
-<p>从明天起，和每一个亲人通信<br>告诉他们我的幸福<br>那幸福的闪电告诉我的<br>我将告诉每一个人<br>给每一条河每一座山取一个温暖的名字 </p>
-<p>陌生人，我也为你祝福<br>愿你有一个灿烂的前程<br>愿你有情人终成眷属<br>愿你在尘世获得幸福<br>我只愿面朝大海，春暖花开 </p>
+            <blockquote class="blockquote-center"><p> 明天开始是新的一年，<br>也是职业转型的开始，<br>由互联网转型大数据，<br>前方的路看的不是很清楚，<br>但是对生活的热情不减。</p>
 </blockquote>
-
+<div class="note info"><p>从明天开始，做一个幸福的人<br>喂马、劈柴，周游世界<br>从明天起，关心粮食和蔬菜<br>我有一所房子，面朝大海，春暖花开</p>
+<p>从明天起，和每一个亲人通信<br>告诉他们我的幸福<br>那幸福的闪电告诉我的<br>我将告诉每一个人<br>给每一条河每一座山取一个温暖的名字 </p>
+<p>陌生人，我也为你祝福<br>愿你有一个灿烂的前程<br>愿你有情人终成眷属<br>愿你在尘世获得幸福<br>我只愿面朝大海，春暖花开 </p></div>
           
         
       
