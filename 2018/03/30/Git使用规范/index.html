@@ -116,7 +116,7 @@
 
 
 
-  <meta name="keywords" content="日常," />
+  <meta name="keywords" content="Git,编码规范," />
 
 
 
@@ -127,17 +127,20 @@
 
 
 
-<meta name="keywords" content="日常">
+<meta name="description" content="Git团队协作使用规范 规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。提升我们的工作效率。此规范会不断地完善。  开发人员Git使用流程（规范） 克隆分支   git clone git@url  切换到开发分支   git checkout developer  基于开发分支新建本地开发分支进行代码修改   git checkout -b lufei  代码提交前合并其他团队">
+<meta name="keywords" content="Git,编码规范">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome ,MoonMan">
-<meta property="og:url" content="http://yoursite.com/2017/12/01/index/index.html">
+<meta property="og:title" content="Git团队协助使用规范">
+<meta property="og:url" content="http://yoursite.com/2018/03/30/Git使用规范/index.html">
 <meta property="og:site_name" content="Parallel Universe">
+<meta property="og:description" content="Git团队协作使用规范 规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。提升我们的工作效率。此规范会不断地完善。  开发人员Git使用流程（规范） 克隆分支   git clone git@url  切换到开发分支   git checkout developer  基于开发分支新建本地开发分支进行代码修改   git checkout -b lufei  代码提交前合并其他团队">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/pictrue/moonman.jpg">
-<meta property="og:updated_time" content="2018-03-30T08:28:48.000Z">
+<meta property="og:image" content="http://yoursite.com/pictrue/gitRule.png">
+<meta property="og:updated_time" content="2018-03-30T08:23:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome ,MoonMan">
-<meta name="twitter:image" content="http://yoursite.com/pictrue/moonman.jpg">
+<meta name="twitter:title" content="Git团队协助使用规范">
+<meta name="twitter:description" content="Git团队协作使用规范 规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。提升我们的工作效率。此规范会不断地完善。  开发人员Git使用流程（规范） 克隆分支   git clone git@url  切换到开发分支   git checkout developer  基于开发分支新建本地开发分支进行代码修改   git checkout -b lufei  代码提交前合并其他团队">
+<meta name="twitter:image" content="http://yoursite.com/pictrue/gitRule.png">
 
 
 
@@ -167,13 +170,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/01/index/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/30/Git使用规范/"/>
 
 
 
 
 
-  <title>Welcome ,MoonMan | Parallel Universe</title>
+  <title>Git团队协助使用规范 | Parallel Universe</title>
   
 
 
@@ -290,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/index/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/30/Git使用规范/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="不爱吃鱼的王大喵">
@@ -307,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Welcome ,MoonMan</h1>
+          <h1 class="post-title" itemprop="name headline">Git团队协助使用规范</h1>
         
 
         <div class="post-meta">
@@ -319,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T12:58:00+08:00">
-                2017-12-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T16:19:15+08:00">
+                2018-03-30
               </time>
             
 
@@ -357,7 +360,110 @@
       
 
       
-        <img src="/pictrue/moonman.jpg">
+        <h1 id="Git团队协作使用规范"><a href="#Git团队协作使用规范" class="headerlink" title="Git团队协作使用规范"></a>Git团队协作使用规范</h1><blockquote>
+<p>规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。<br>提升我们的工作效率。<br>此规范会不断地完善。</p>
+</blockquote>
+<h2 id="开发人员Git使用流程（规范）"><a href="#开发人员Git使用流程（规范）" class="headerlink" title="开发人员Git使用流程（规范）"></a>开发人员Git使用流程（规范）</h2><ol>
+<li><font color="#E85155">克隆分支</font>
+
+<p> <code>git clone git@url</code></p>
+</li>
+<li><font color="#E85155">切换到开发分支</font>
+
+<p> <code>git checkout developer</code></p>
+</li>
+<li><font color="#E85155">基于开发分支新建本地开发分支进行代码修改</font>
+
+<p> <code>git checkout -b lufei</code></p>
+</li>
+<li><font color="#E85155">代码提交前合并其他团队人员的提交</font>
+
+<p> <code>git checkout developer</code></p>
+<p> <code>git pull origin developer</code></p>
+</li>
+<li><font color="#E85155">将developer合并到你自己修改的分支，并解决冲突</font>
+
+<p> <code>git checkout lufei</code></p>
+<p> <code>git merge developer</code></p>
+<p> <strong>这个合并过程可能会有冲突，解决的根本办法是功能开发细分</strong></p>
+<p> <strong>如果出现冲突，建议找修改代码的成员一起解决冲突</strong></p>
+</li>
+<li><font color="#E85155">本地测试是否正常</font>
+
+<p> <strong>运行jetty测试是否正常</strong></p>
+</li>
+<li><font color="#E85155">切换到developer分支，合并本地分支，提交</font>
+
+<p> <code>git checkout developer</code></p>
+<p> <code>git merge lufei</code></p>
+<p> <code>git push origin develope</code></p>
+<p> <strong>如果在测试过程别人有提交，这个push会有冲突，需要先pull</strong></p>
+<p> 为了尽量减少冲突，功能模块的开发一定要细分，每个开发人员负责一个模块的开发，尽量不要去修改其他团队成员模块的代码。</p>
+</li>
+</ol>
+<hr>
+<h2 id="提交规范"><a href="#提交规范" class="headerlink" title="提交规范"></a>提交规范</h2><ul>
+<li>禁止使用-ff or –force等强制提交，覆盖中央仓库的内容。</li>
+<li>不要各自在自己的 Git 分支开发，然后发文件合并。正确的方法应该是开一个远程分 支，然后一起在远程分支里协作。不然，容易出现代码回溯（即别人的代码被覆盖的情况）</li>
+<li><p>提交说明的结构<br>  当提交内容简单时，尽量用的一句话描述”做了什么”。</p>
+<p>  句子结构可以分解为(方括号中为可选): </p>
+<p>  &emsp;&emsp;&emsp;&emsp;&emsp;<code>动作+组件+[原因-索引]</code></p>
+<ul>
+<li>动作:即提交的行为，句首字母大写。有文章认为只使用Update、Add、Remove 三个动作就可以满足使用。但是为了更精准地描述，我还是倾向于使用其它动词，下图有常见的动作用词。每一次提交只应该有一个动作，多个动作请适当拆分。</li>
+<li>组件:指的操作内容，应该用精准的名称，类名方法名等，方便快速定位。不应 该提供宽泛的文件名</li>
+<li>原因及索引:必要情况下用精简的语句描述原因，有问题追踪系统的话可以指向相应的ID。</li>
+</ul>
+</li>
+</ul>
+<div style="text-align:center"><img src="/pictrue/gitRule.png"></div>
+
+
+<hr>
+<h2 id="分支建立规范"><a href="#分支建立规范" class="headerlink" title="分支建立规范"></a>分支建立规范</h2><p>&emsp;&emsp;所有项目采用分支开发方式，分支分为<strong>开发分支</strong>、<strong>新功能分支</strong>、<strong>修复分支</strong>、<strong>其他分支</strong>和<strong>master分支</strong></p>
+<div style="margin-left:10%">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><font color="#E85155">分支</font></th>
+<th style="text-align:left"><font color="#E85155">命名</font></th>
+<th style="text-align:left"><font color="#E85155">说明</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">master分支</td>
+<td style="text-align:left">master</td>
+<td style="text-align:left">发布分支</td>
+</tr>
+<tr>
+<td style="text-align:left">开发分支</td>
+<td style="text-align:left">developer</td>
+<td style="text-align:left">主要的提交分支</td>
+</tr>
+<tr>
+<td style="text-align:left">更能分支</td>
+<td style="text-align:left">feature</td>
+<td style="text-align:left">新功能分支</td>
+</tr>
+<tr>
+<td style="text-align:left">修复分支</td>
+<td style="text-align:left">bugfix-{date}</td>
+<td style="text-align:left">bug修复分支</td>
+</tr>
+<tr>
+<td style="text-align:left">其他分支</td>
+<td style="text-align:left">other-{date}</td>
+<td style="text-align:left">特殊情况时建立的分支</td>
+</tr>
+</tbody>
+</table>
+<p></p></div><br>&emsp;&emsp;目前我所在小组所用到的项目，都进行了分支的清理，目前使用的就两个分支，一个developer分支（开发人员提交的分支），一个master分支（发布分支）。其他分支暂时没有建立，因为现在项目比较小，我们也有线下测试环境，没有必要，以后再考虑。<p></p>
+<hr>
+<h2 id="发布规范"><a href="#发布规范" class="headerlink" title="发布规范"></a>发布规范</h2><ul>
+<li>生产环境必须使用主分支发布</li>
+<li>测试环境使用developer或者feature分支</li>
+</ul>
 
       
     </div>
@@ -375,7 +481,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日常/" rel="tag"># 日常</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/编码规范/" rel="tag"># 编码规范</a>
           
         </div>
       
@@ -388,15 +496,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/12/30/Hello-World！/" rel="next" title="Hello World！">
+                <i class="fa fa-chevron-left"></i> Hello World！
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/30/Hello-World！/" rel="prev" title="Hello World！">
-                Hello World！ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -448,8 +556,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -500,6 +617,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git团队协作使用规范"><span class="nav-number">1.</span> <span class="nav-text">Git团队协作使用规范</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开发人员Git使用流程（规范）"><span class="nav-number">1.1.</span> <span class="nav-text">开发人员Git使用流程（规范）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交规范"><span class="nav-number">1.2.</span> <span class="nav-text">提交规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支建立规范"><span class="nav-number">1.3.</span> <span class="nav-text">分支建立规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布规范"><span class="nav-number">1.4.</span> <span class="nav-text">发布规范</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
