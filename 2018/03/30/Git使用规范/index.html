@@ -130,15 +130,15 @@
 <meta name="description" content="Git团队协作使用规范 规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。提升我们的工作效率。此规范会不断地完善。  开发人员Git使用流程（规范） 克隆分支   git clone git@url  切换到开发分支   git checkout developer  基于开发分支新建本地开发分支进行代码修改   git checkout -b lufei  代码提交前合并其他团队">
 <meta name="keywords" content="Git,编码规范">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git团队协助使用规范">
+<meta property="og:title" content="Git使用规范">
 <meta property="og:url" content="http://yoursite.com/2018/03/30/Git使用规范/index.html">
 <meta property="og:site_name" content="Parallel Universe">
 <meta property="og:description" content="Git团队协作使用规范 规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。提升我们的工作效率。此规范会不断地完善。  开发人员Git使用流程（规范） 克隆分支   git clone git@url  切换到开发分支   git checkout developer  基于开发分支新建本地开发分支进行代码修改   git checkout -b lufei  代码提交前合并其他团队">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/pictrue/gitRule.png">
-<meta property="og:updated_time" content="2018-03-30T09:23:55.000Z">
+<meta property="og:updated_time" content="2018-03-30T13:22:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git团队协助使用规范">
+<meta name="twitter:title" content="Git使用规范">
 <meta name="twitter:description" content="Git团队协作使用规范 规范git的使用是为了避免git中央仓库分支混乱，导致发布出问题。提升我们的工作效率。此规范会不断地完善。  开发人员Git使用流程（规范） 克隆分支   git clone git@url  切换到开发分支   git checkout developer  基于开发分支新建本地开发分支进行代码修改   git checkout -b lufei  代码提交前合并其他团队">
 <meta name="twitter:image" content="http://yoursite.com/pictrue/gitRule.png">
 
@@ -176,7 +176,7 @@
 
 
 
-  <title>Git团队协助使用规范 | Parallel Universe</title>
+  <title>Git使用规范 | Parallel Universe</title>
   
 
 
@@ -310,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git团队协助使用规范</h1>
+          <h1 class="post-title" itemprop="name headline">Git使用规范</h1>
         
 
         <div class="post-meta">
@@ -430,45 +430,8 @@
 
 <hr>
 <h2 id="分支建立规范"><a href="#分支建立规范" class="headerlink" title="分支建立规范"></a>分支建立规范</h2><p>&emsp;&emsp;所有项目采用分支开发方式，分支分为<strong>开发分支</strong>、<strong>新功能分支</strong>、<strong>修复分支</strong>、<strong>其他分支</strong>和<strong>master分支</strong></p>
-<div style="margin-left:10%">
+<div style="margin-left:10%"><br><br>| <font color="#E85155">分支</font> | <font color="#E85155">命名</font> | <font color="#E85155">说明</font> |<br>| :- | :- | :- |<br>| master分支 | master | 发布分支 |<br>| 开发分支 | developer | 主要的提交分支 |<br>| 更能分支 | feature | 新功能分支 |<br>| 修复分支 | bugfix-{date} | bug修复分支 |<br>| 其他分支 | other-{date} | 特殊情况时建立的分支 |<br><br></div>
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left"><font color="#E85155">分支</font></th>
-<th style="text-align:left"><font color="#E85155">命名</font></th>
-<th style="text-align:left"><font color="#E85155">说明</font></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">master分支</td>
-<td style="text-align:left">master</td>
-<td style="text-align:left">发布分支</td>
-</tr>
-<tr>
-<td style="text-align:left">开发分支</td>
-<td style="text-align:left">developer</td>
-<td style="text-align:left">主要的提交分支</td>
-</tr>
-<tr>
-<td style="text-align:left">更能分支</td>
-<td style="text-align:left">feature</td>
-<td style="text-align:left">新功能分支</td>
-</tr>
-<tr>
-<td style="text-align:left">修复分支</td>
-<td style="text-align:left">bugfix-{date}</td>
-<td style="text-align:left">bug修复分支</td>
-</tr>
-<tr>
-<td style="text-align:left">其他分支</td>
-<td style="text-align:left">other-{date}</td>
-<td style="text-align:left">特殊情况时建立的分支</td>
-</tr>
-</tbody>
-</table>
-<p></p></div><br>&emsp;&emsp;目前我所在小组所用到的项目，都进行了分支的清理，目前使用的就两个分支，一个developer分支（开发人员提交的分支），一个master分支（发布分支）。其他分支暂时没有建立，因为现在项目比较小，我们也有线下测试环境，没有必要，以后再考虑。<p></p>
 <hr>
 <h2 id="发布规范"><a href="#发布规范" class="headerlink" title="发布规范"></a>发布规范</h2><ul>
 <li>生产环境必须使用主分支发布</li>
@@ -844,7 +807,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '<%= page.title %>', 
+            id: window.location.pathname, 
             owner: 'WakingWang',
             repo: 'WalkingWangBlogComments',
             
