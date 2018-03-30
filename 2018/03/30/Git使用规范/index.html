@@ -844,7 +844,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: document.location.pathname, 
+            id: window.location.pathname.split("/")[window.location.pathname.split("/").length-2], 
             owner: 'WakingWang',
             repo: 'WalkingWangBlogComments',
             
